@@ -645,6 +645,10 @@
        AVATAR (ảnh thật)
     ═══════════════════════ */
     .sub-btn { white-space: nowrap; }
+    /* gọn bảng lịch để không đè lên thanh âm lượng khi tuần có nhiều stream */
+    .sched-list { gap: .25rem; }
+    .np-badge { margin-top: .7rem; }
+    .footer-quote { margin-top: .5rem; }
     .app { padding-bottom: 96px; }   /* chừa chỗ cho dải cột sóng ở chân trang */
 
     /* ═══════════════════════
@@ -993,23 +997,23 @@
 /* ══════════════════════════════════════════════════
    CẬP NHẬT MỖI TUẦN
 ══════════════════════════════════════════════════ */
-const WEEK_OF = "26/10 — 1/11";
+const WEEK_OF = "23/11 — 29/11 · giờ Việt Nam";
 
 const WEEK_SCHEDULE = [
-  { day:"T.2", date:"26/10", status:"stream",  activity:"Talk Show", time:"20:00", note:"" },
-  { day:"T.3", date:"27/10", status:"off",     activity:"",          time:"",      note:"" },
-  { day:"T.4", date:"28/10", status:"off",     activity:"",          time:"",      note:"" },
-  { day:"T.5", date:"29/10", status:"off",     activity:"",          time:"",      note:"" },
-  { day:"T.6", date:"30/10", status:"off",     activity:"",          time:"",      note:"" },
-  { day:"T.7", date:"31/10", status:"off",     activity:"",          time:"",      note:"" },
-  { day:"CN",  date:"1/11",  status:"off",     activity:"",          time:"",      note:"" },
+  { day:"T.2", date:"23/11", status:"stream",  activity:"Talk Show", time:"20:00", note:"" },
+  { day:"T.3", date:"24/11", status:"off",     activity:"",          time:"",      note:"" },
+  { day:"T.4", date:"25/11", status:"off",     activity:"",          time:"",      note:"" },
+  { day:"T.5", date:"26/11", status:"off",     activity:"",          time:"",      note:"" },
+  { day:"T.6", date:"27/11", status:"stream",  activity:"Homeless",  time:"20:00", note:"" },
+  { day:"T.7", date:"28/11", status:"off",     activity:"",          time:"",      note:"" },
+  { day:"CN",  date:"29/11", status:"off",     activity:"",          time:"",      note:"" },
 ];
 
 const streamDay = WEEK_SCHEDULE.find(d => d.status === "stream");
 const featured  = streamDay ? {
-  id: 18,
-  date: `thứ Hai, 26/10`,
-  desc: `Tuần này 1 stream —<br>thứ Hai Talk Show.`,
+  id: 19,
+  date: `thứ Hai, 23/11`,
+  desc: `Tuần này 2 stream —<br>thứ Hai Talk Show,<br>thứ Sáu Homeless.<br>Cả hai lúc 20:00 giờ VN.`,
 } : null;
 
 /* ════════════════════════
